@@ -6,6 +6,7 @@ import { conectarMongoDB } from '../../middlewares/conectarMongoDB';
 import { validarTokenJWT } from '../../middlewares/validarTokenJWT';
 import {publicaçãoModel} from '../../models/publicacaoModel';
 import {UsuarioModel} from '../../models/UsuarioModel'
+
 const handler = nc()
     .use(updload.single('file'))
     .post(async(req : any, res : NextApiResponse<RespostaPadraoMsg>) => {

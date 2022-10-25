@@ -24,6 +24,18 @@ const {
     const uploadImagemCosmic = async(req : any) => {
         console.log('uploadImagemCosmic', req);
         if(req?.file?.originalname){
+
+            if(!req.file.originalname.includes(.png)&&
+                !req.file.originalname.includes(.jpg)&&
+                !req.file.originalname.includes(.jpeg)){
+                    throw new Error ('Extensao da imagem invalida');
+                }
+
+        
+
+
+
+            
             const media_object = {
                 originalName: req.file.originalName,
                 buffer : req.file.buffer
