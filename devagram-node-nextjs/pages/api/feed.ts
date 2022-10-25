@@ -1,5 +1,5 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
-import {RespostaPadraoMsg} from '../../types/RespostaPadraoMsg';
+import type {RespostaPadraoMsg} from '../../types/RespostaPadraoMsg';
 import {validarTokenJWT} from '../../middlewares/validarTokenJWT';
 import {conectarMongoDB} from '../../middlewares/conectarMongoDB';
 import { unstable_renderSubtreeIntoContainer } from 'react-dom';
